@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Gym Admin</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="add_class.html">Classes</a></li>
+                    <li><a href="#">Trainers</a></li>
+                    <li><a href="#">Membership Plans</a></li>
+                    <li><a href="#">Payments & Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header class="admin-header">
+                <h1>Welcome, Admin!</h1>
+                <button class="logout-btn">Logout</button>
+            </header>
+
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <h2>500</h2>
+                    <p>Total Members</p>
+                </div>
+                <div class="stat-card">
+                    <h2>450</h2>
+                    <p>Active Memberships</p>
+                </div>
+                <div class="stat-card">
+                    <h2>$20,000</h2>
+                    <p>Total Revenue</p>
+                </div>
+                <div class="stat-card">
+                    <h2>10</h2>
+                    <p>Classes Today</p>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <button class="action-btn">Add New Member</button>
+                <button class="action-btn">Create Class</button>
+                <button class="action-btn">Generate Report</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

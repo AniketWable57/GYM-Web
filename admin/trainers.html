@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Gym Admin</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="users.html">Members</a></li>
+                    <li><a href="add_class.html">Classes</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="membership.html">Membership Plans</a></li>
+                    <li><a href="#">Payments & Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <form id="add-trainer-form">
+                <h1>Add New Trainer</h1>
+                <div id="form-group-trainer-name" class="form-group">
+                    <label for="trainer-name">Trainer Name:</label>
+                    <input type="text" id="trainer-name" name="trainer_name" placeholder="Enter trainer name" required>
+                </div>
+                <div id="form-group-experience" class="form-group">
+                    <label for="experience">Experience (Years):</label>
+                    <input type="number" id="experience" name="experience" placeholder="Enter years of experience" min="0" required>
+                </div>
+                <div id="form-group-expertise" class="form-group">
+                    <label for="expertise">Expertise:</label>
+                    <div>
+                        <input type="checkbox" id="yoga" name="expertise" value="Yoga">
+                        <label for="yoga">Yoga</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cardio" name="expertise" value="Cardio">
+                        <label for="cardio">Cardio</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="workout" name="expertise" value="Workout">
+                        <label for="workout">Workout</label>
+                    </div>
+                </div>
+                <div id="form-group-image" class="form-group">
+                    <label for="trainer-image">Image URL:</label>
+                    <input type="url" id="trainer-image" name="image_url" placeholder="Enter trainer image URL" required>
+                </div>
+                <div id="form-submit">
+                    <button type="submit" id="submit-button">Add Trainer</button>
+                </div>
+            </form>
+        
+            <div id="trainers-list">
+                <h2>Trainers</h2>
+                <div id="trainers-container" class="trainers-grid"></div>
+            </div>
+     
+        </main>
+    </div>
+    
+    <script src="trainer.js"></script>
+</body>
+</html>

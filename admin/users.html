@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admin Dashboard - Members</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="users.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Gym Admin</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="users.html">Members</a></li>
+                    <li><a href="add_class.html">Classes</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="membership.html">Membership Plans</a></li>
+                    <li><a href="#">Payments & Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <!-- Add Member Form -->
+            <form id="add-member-form">
+                <h1 id="form-title">Add New Member</h1>
+            
+                <!-- Hidden ID for update -->
+                <input type="hidden" id="user-id" name="user_id">
+            
+                <!-- Member Name -->
+                <div id="form-group-member-name" class="form-group">
+                    <label for="member-name">Member Name:</label>
+                    <input type="text" id="member-name" name="name" placeholder="Enter member name" required>
+                </div>
+            
+                <!-- Email -->
+                <div id="form-group-email" class="form-group">
+                    <label for="member-email">Email:</label>
+                    <input type="email" id="member-email" name="email" placeholder="Enter member email" required>
+                </div>
+            
+                <!-- Password -->
+                <div id="form-group-password" class="form-group">
+                    <label for="member-password">Password:</label>
+                    <input type="password" id="member-password" name="password" placeholder="Enter password" required>
+                </div>
+            
+                <!-- Phone Number -->
+                <div id="form-group-phone" class="form-group">
+                    <label for="member-phone">Phone Number:</label>
+                    <input type="tel" id="member-phone" name="mobile_no" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+                </div>
+            
+                <!-- Address -->
+                <div id="form-group-address" class="form-group">
+                    <label for="member-address">Address:</label>
+                    <input type="text" id="member-address" name="address" placeholder="Enter address" required>
+                </div>
+            
+                <!-- Submit Button -->
+                <div id="form-submit">
+                    <button type="submit" id="submit-button">Add Member</button>
+                </div>
+            </form>
+            
+            
+            <!-- Members List -->
+            <div id="members-list">
+                <h2>Members</h2>
+                <div id="members-container" class="members-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="users.js"></script>
+</body>
+</html>

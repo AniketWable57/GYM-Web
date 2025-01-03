@@ -13,11 +13,11 @@
             <div class="logo">Gym Admin</div>
             <nav>
                 <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Members</a></li>
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="users.html ">Members</a></li>
                     <li><a href="add_class.html">Classes</a></li>
-                    <li><a href="#">Trainers</a></li>
-                    <li><a href="#">Membership Plans</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="membership.html">Membership Plans</a></li>
                     <li><a href="#">Payments & Reports</a></li>
                     <li><a href="#">Settings</a></li>
                 </ul>
@@ -25,37 +25,42 @@
         </aside>
 
         <main id="main-content">
-            <form id="add-class-form">
-                <div id="form-group-class-name" class="form-group">
-                    <label for="class-name">Class Name:</label>
-                    <input type="text" id="class-name" name="class_name" placeholder="Enter class name" required>
-                </div>
-                <div id="form-group-instructor" class="form-group">
-                    <label for="instructor">Instructor:</label>
-                    <input type="text" id="instructor" name="instructor" placeholder="Enter instructor name" required>
-                </div>
-                <div id="form-group-schedule" class="form-group">
-                    <label for="schedule">Schedule:</label>
-                    <input type="text" id="schedule" name="day" placeholder="E.g., Monday" required>
-                </div>
-                <div id="form-group-description" class="form-group">
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" placeholder="Provide a brief description" rows="5" required></textarea>
-                </div>
-                <div id="form-group-image" class="form-group">
-                    <label for="image-url">Image URL:</label>
-                    <input type="url" id="image-url" name="image_url" placeholder="Enter image URL" required>
-                </div>
-                <div id="form-submit">
-                    <button type="submit" id="submit-button">Add Class</button>
-                </div>
-            </form>
-        </main>
-        
+           
+                <form id="add-class-form">
+                    <h1>Add New Class</h1>
+                    <div id="form-group-class-name" class="form-group">
+                        <label for="class-name">Class Name:</label>
+                        <input type="text" id="class-name" name="class_name" placeholder="Enter class name" required>
+                    </div>
+                    <div id="form-group-instructor" class="form-group">
+                        <label for="instructor">Instructor:</label>
+                        <input type="text" id="instructor" name="instructor" placeholder="Enter instructor name" required>
+                    </div>
+                    <div id="form-group-schedule" class="form-group">
+                        <label for="schedule">Schedule:</label>
+                        <input type="text" id="schedule" name="day" placeholder="E.g., Monday" required>
+                    </div>
+                    <div id="form-group-description" class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" placeholder="Provide a brief description" rows="5" required></textarea>
+                    </div>
+                    <div id="form-group-image" class="form-group">
+                        <label for="image-url">Image URL:</label>
+                        <input type="url" id="image-url" name="image_url" placeholder="Enter image URL" required>
+                    </div>
+                    <div id="form-submit">
+                        <button type="submit" id="submit-button">Add Class</button>
+                    </div>
+                </form>
 
-          
+            <h1>Class Management</h1>
+            <div id="class-container" class="class-container"></div>
+        
+           
+           
         </main>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

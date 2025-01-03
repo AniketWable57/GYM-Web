@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="admin-container">
+
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="logo">Gym Admin</div>
+            <div class="logo">///</div>
             <nav>
                 <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Members</a></li>
-                    <li><a href="add_class.html">Classes</a></li>
-                    <li><a href="#">Trainers</a></li>
-                    <li><a href="#">Membership Plans</a></li>
-                    <li><a href="#">Payments & Reports</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="home.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="users.html"><i class="fas fa-users"></i> Members</a></li>
+                    <li><a href="add_class.html"><i class="fas fa-chalkboard-teacher"></i> Classes</a></li>
+                    <li><a href="trainers.html"><i class="fas fa-user-friends"></i> Trainers</a></li>
+                    <li><a href="membership.html"><i class="fas fa-money-bill-wave"></i> Membership Plans</a></li>
+                    <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Payments & Reports</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>
             </nav>
         </aside>
@@ -33,30 +37,56 @@
 
             <section class="dashboard-stats">
                 <div class="stat-card">
-                    <h2>500</h2>
-                    <p>Total Members</p>
+                    <h2 id="total-users">0</h2>
+                    <p>Total Users</p>
                 </div>
                 <div class="stat-card">
-                    <h2>450</h2>
-                    <p>Active Memberships</p>
+                    <h2 id="total-classes">0</h2>
+                    <p>Total Classes</p>
                 </div>
                 <div class="stat-card">
-                    <h2>$20,000</h2>
-                    <p>Total Revenue</p>
+                    <h2 id="total-trainers">0</h2>
+                    <p>Total Trainers</p>
                 </div>
                 <div class="stat-card">
-                    <h2>10</h2>
-                    <p>Classes Today</p>
+                    <h2 id="total-active-users">0</h2>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-card">
+                    <h2 id="total-completed-classes">0</h2>
+                    <p>Completed Classes</p>
                 </div>
             </section>
 
             <section class="quick-actions">
                 <h2>Quick Actions</h2>
-                <button class="action-btn">Add New Member</button>
-                <button class="action-btn">Create Class</button>
-                <button class="action-btn">Generate Report</button>
+                <button class="action-btn" onclick="window.location.href='users.html';">Add New Member</button>
+                <button class="action-btn" onclick="window.location.href='add_class.html';">Create Class</button>
+                <button class="action-btn" onclick="window.location.href='trainers.html';">Add Trainers</button>
             </section>
         </main>
+
+
+
     </div>
+
+    <script>
+        // Fetch the dashboard stats from the server
+        fetch('/get_dashboard_stats')
+            .then(response => response.json())
+            .then(data => {
+                // Update the HTML with the fetched data
+                document.getElementById('total-users').innerText = data.total_users;
+                document.getElementById('total-classes').innerText = data.total_classes;
+                document.getElementById('total-trainers').innerText = data.total_trainers;
+                document.getElementById('total-active-users').innerText = data.total_active_users;
+                document.getElementById('total-completed-classes').innerText = data.total_completed_classes;
+            })
+            .catch(error => {
+                console.error('Error fetching dashboard stats:', error);
+            });
+    </script>
+
 </body>
+
 </html>

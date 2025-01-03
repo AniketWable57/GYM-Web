@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admin Dashboard - Members</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="users.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Gym Admin</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="users.html">Members</a></li>
+                    <li><a href="add_class.html">Classes</a></li>
+                    <li><a href="trainers.html">Trainers</a></li>
+                    <li><a href="#">Membership Plans</a></li>
+                    <li><a href="#">Payments & Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <!-- Members List -->
+            <div id="members-list">
+                <h2>Members</h2>
+                <div id="members-container" class="members-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="membership.js"></script>
+</body>
+</html>
